@@ -131,3 +131,41 @@ void	Diccionario(char* szNombre, char szPalabras[][TAMTOKEN], int iEstadisticas[
 					strcpy(arrayAxiliar, szpalabrasinorden[i]);//guardo el valor en un array para que no se me pierda
 					strcpy(szpalabrasinorden[i], szpalabrasinorden[posicionDelantera]);
 					strcpy(szpalabrasinorden[posicionDelantera], arrayAxiliar);
+				}
+			}
+		}
+
+	}
+	else//si no se pudo leer el archivo
+	{
+		printf("No fue posible leer el archivo, verifique que este en la capeta mecionada o que no este vacío ni corrupto.");
+	}
+}
+
+void	ListaCandidatas(
+	char	szPalabrasSugeridas[][TAMTOKEN],	//Lista de palabras clonadas
+	int		iNumSugeridas,						//Lista de palabras clonadas
+	char	szPalabras[][TAMTOKEN],				//Lista de palabras del diccionario
+	int		iEstadisticas[],					//Lista de las frecuencias de las palabras
+	int		iNumElementos,						//Numero de elementos en el diccionario
+	char	szListaFinal[][TAMTOKEN],			//Lista final de palabras a sugerir
+	int		iPeso[],							//Peso de las palabras en la lista final
+	int& iNumLista)							//Numero de elementos en la szListaFinal
+{
+
+	//Sustituya estas lineas por su código
+	strcpy(szListaFinal[0], szPalabrasSugeridas[0]); //la palabra candidata
+	iPeso[0] = iEstadisticas[0];			// el peso de la palabra candidata
+
+	iNumLista = 1;							//Una sola palabra candidata
+}
+
+void	ClonaPalabras(
+	char* szPalabraLeida,						// Palabra a clonar
+	char	szPalabrasSugeridas[][TAMTOKEN], 	//Lista de palabras clonadas
+	int& iNumSugeridas)						//Numero de elementos en la lista
+{
+	//Sustituya estas lineas por su código
+	strcpy(szPalabrasSugeridas[0], szPalabraLeida); //lo que sea que se capture, es sugerencia
+	iNumSugeridas = 1;							//Una sola palabra sugerida
+}
