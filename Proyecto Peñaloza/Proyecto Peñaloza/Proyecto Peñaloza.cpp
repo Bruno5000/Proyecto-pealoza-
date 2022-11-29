@@ -38,3 +38,12 @@ int main(int argc, char* argv[])//esta es la forma estandar de declarar la funci
     for (i = 0; i < lasPalabras; i++)
         printf("\n%s", diccionario[i]);
 }
+
+//Quiso decir 2da parte del programa 
+/*****************************************************************************************************************
+    UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO
+    FACULTAD DE ESTUDIOS SUPERIORES -ARAGON-
+    Computadoras y programacion.
+    (c) Bruno Ramírez Picazo Bruno
+    Quiso decir: Programa principal de la aplicacion de la distancia de Levenstein.
+******************************************************************************************************************/
