@@ -111,3 +111,23 @@ void	Diccionario(char* szNombre, char szPalabras[][TAMTOKEN], int iEstadisticas[
 				arreglo ya que si se deja en la misma casilla nuca más va entar al while
 				de arriba y solo va almacenar una sola palabra*/
 				caracterszNombre++;
+			}
+		}
+		/*solo va a poder salir del while en cunato acabe el arreglo ahora solo queda ordenar las palabras alfabeticamente e
+		e identificar las palabras que se repiten*/
+		for (int i = 0; i < caracterszNombre; i++)
+		{
+			for (int posicionDelantera = 1; posicionDelantera < caracterszNombre; posicionDelantera++)
+			{
+				if (strcmp(szpalabrasinorden[i], szpalabrasinorden[posicionDelantera]) == 0)
+					/*esto es en caso de que las palabras son iguales, deja vacia a tabla[posicionDelantera] y a la
+					frecuencia le suma 1*/
+				{
+					szpalabrasinorden[posicionDelantera][0] = '\0';
+					unaPalabra.frecuencia++;
+				}
+				else if (strcmp(szpalabrasinorden[i], szpalabrasinorden[posicionDelantera]) > 0)
+				{
+					strcpy(arrayAxiliar, szpalabrasinorden[i]);//guardo el valor en un array para que no se me pierda
+					strcpy(szpalabrasinorden[i], szpalabrasinorden[posicionDelantera]);
+					strcpy(szpalabrasinorden[posicionDelantera], arrayAxiliar);
