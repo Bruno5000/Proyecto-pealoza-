@@ -11,3 +11,14 @@ nombre,*/
     printf("%s", buffer);
     caracterBuffer = 0;
     while (buffer[caracterBuffer] != '\0')
+    {
+        caracterDestino = 0;
+        while (buffer[caracterBuffer] != ' ' && buffer[caracterBuffer] != '\0')
+            tabla[numPalabra][caracterDestino++] = buffer[caracterBuffer++];
+        tabla[numPalabra][caracterDestino] = '\0';
+        if (buffer[caracterBuffer] != '\0')
+            caracterBuffer++;
+        numPalabra++;
+    }
+
+    return numPalabra;
