@@ -22,3 +22,11 @@ nombre,*/
     }
 
     return numPalabra;
+}
+int main(int argc, char* argv[])//esta es la forma estandar de declarar la funcion main 
+{
+    char arrCads[5];
+    char buffer[300];
+    char diccionario[10][80];
+    int lasPalabras;
+    int i;
