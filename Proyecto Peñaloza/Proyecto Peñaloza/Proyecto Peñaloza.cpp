@@ -30,3 +30,11 @@ int main(int argc, char* argv[])//esta es la forma estandar de declarar la funci
     char diccionario[10][80];
     int lasPalabras;
     int i;
+
+    printf(">");
+    gets_s(buffer, 300);
+    lasPalabras = dividePalabra(buffer, diccionario);//
+    printf("\nSe detectaron %i palabras: ", lasPalabras);
+    for (i = 0; i < lasPalabras; i++)
+        printf("\n%s", diccionario[i]);
+}
