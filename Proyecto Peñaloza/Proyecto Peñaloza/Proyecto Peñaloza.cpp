@@ -47,3 +47,14 @@ int main(int argc, char* argv[])//esta es la forma estandar de declarar la funci
     (c) Bruno Ramírez Picazo Bruno
     Quiso decir: Programa principal de la aplicacion de la distancia de Levenstein.
 ******************************************************************************************************************/
+// quisodecir.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include <string.h>
+#include <stdio.h>
+#define TAMTOKEN 50
+//#include "stdafx.h"
+//#include "corrector.h"
+
+void	Diccionario(char* szNombre, char szPalabras[][TAMTOKEN], int iEstadisticas[], int& iNumElementos)
+{
